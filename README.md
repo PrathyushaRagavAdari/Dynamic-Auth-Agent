@@ -1,6 +1,7 @@
 # GraphGuard: Dynamic Identity Verification Agent 🛡️
 
 **A GenAI-driven security system that replaces static security questions with dynamic, context-aware challenges based on real-time transaction graphs.**
+---
 **Team: Dynamic Agents**
 ---
 
