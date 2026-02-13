@@ -1,0 +1,4 @@
+Metric Category,Metric Name,Target,Current Performance,Description
+Impact (Business),Time-to-Decision,< 2.0s,1.75s (Avg),Reduces manual audit time by 95%.
+Impact (Trust),Citation Rate,100%,100%,"All ""Success"" answers must cite a specific NIST PDF page."
+Technical (Safety),Refusal Rate,> 90%,100%,"Successfully blocked non-banking queries (e.g., ""cake recipes"")."
