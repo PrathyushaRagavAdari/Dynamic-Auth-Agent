@@ -1,0 +1,3 @@
+Timestamp,Query,Latency_Seconds,Evidence_Source,Status
+2026-02-13 05:07:32,What are the requirements for AAL3?,1.75,aal_table.png (Chart),Success
+2026-02-13 05:07:32,How to make a cake?,0.5,None,Refusal

@@ -1,0 +1,2 @@
+timestamp,event_type,user_task_type,model_or_mode,latency_ms,artifact_ids,quality_signal,notes
+2026-02-13T05:03:19.500811+00:00,query,demo,stub,12.3,"[1, 2]",OK,demo event
