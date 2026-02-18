@@ -8,7 +8,7 @@
 ## 👥 Team & Roles
 | Name | Role | GitHub |
 | :--- | :--- | :--- |
-| **Prathyu Adari** | **Product Intelligence, Strategy & Insight Lead ** | (https://github.com/PrathyushaRagavAdari ) |
+| **Prathyu Adari** | **Product Intelligence, Strategy & Insight Lead** | (https://github.com/PrathyushaRagavAdari ) |
 | *Krutarth Lad* | *Systems, Data Architecture, ML & Pipeline Lead* | *(https://github.com/ladkrutarth)* |
 
 > **Contact:** pradfy@umsystem.edu
