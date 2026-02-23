@@ -212,3 +212,23 @@ logs/product_metrics.csv: The log file with at least 5 rows (generated in Sectio
 requirements.txt: The dependencies (generated in Section 6.1).
 
 results/: Folder containing your failure risk analysis (generated in Section 8).
+
+# Team Contributions
+
+## Prathyu Adari
+**Role:** Product Intelligence, Strategy & Insight Lead
+- **Responsibilities:** Designed the interactive analytics dashboard extension. Engineered the decision module logic (`models/decision_engine.py`) ensuring NIST compliance checks were integrated into the LLM output. Managed the evaluation logging pipeline and UI integration.
+
+## Krutarth Lad
+**Role:** Systems, Data Architecture, ML & Pipeline Lead
+- **Responsibilities:** Handled data ingestion and Snowflake cloud warehouse integration. Wrote the SQL schemas (`sql/schema.sql`) and Python ingestion scripts (`ingestion/load_data.py`). Developed the feature engineering pipeline to extract user sub-graphs for the LLM.
+
+## System Workflow
+GraphGuard is a dynamic identity verification agent. The production pipeline ingests Kaggle synthetic transaction data into a **Snowflake Cloud Warehouse**. Our Python feature engineering layer (`features/`) extracts user sub-graphs from Snowflake via SQL views. These features are passed to the **Modeling / Decision Layer** (`models/`), which uses RAG/LLM to generate context-aware, NIST-compliant security questions. Finally, this data is served to the Compliance Auditor via a **Streamlit Application**.
+
+## Team-Scaled Extensions (2 Extensions Implemented)
+1. **Interactive Analytics Dashboard Component:** Added a visual data explorer in the Streamlit app to analyze transaction volume across merchants directly from the feature layer.
+2. **Evaluation Metrics Logging Dashboard:** Implemented automated pipeline logging (`pipeline_logs.csv`) which is parsed and visualized in real-time on a dedicated tab in the Streamlit UI to monitor system latency and compliance status.
+
+## Deliverables Links
+- **Demo Video:** 
