@@ -1,1 +1,12 @@
+# features/feature_pipeline.py
+import json
 
+def get_user_transaction_graph(user_id: str) -> str:
+    mock_graph_context = {
+        "user_id": user_id,
+        "recent_nodes": [
+            {"merchant": "Kroger", "location": "Columbus, OH", "amount": 54.30},
+            {"merchant": "Uber", "location": "Columbus, OH", "amount": 12.50}
+        ]
+    }
+    return json.dumps(mock_graph_context)
