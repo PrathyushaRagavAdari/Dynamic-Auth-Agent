@@ -1,3 +1,5 @@
-Timestamp	User_ID	Latency_Sec	Status
-2/23/26 0:30	USER_9981	1.25	Passed NIST AAL2 check
-
+| Timestamp | User_ID | Latency_Sec | Status |
+| :--- | :--- | :--- | :--- |
+| 2026-02-22 10:01:05 | USER_9981 | 1.25 | Passed NIST AAL2 check |
+| 2026-02-22 10:05:12 | USER_4412 | 1.10 | Passed NIST AAL1 check |
+| 2026-02-22 10:15:30 | USER_9981 | 1.20 | Passed NIST AAL2 check |
