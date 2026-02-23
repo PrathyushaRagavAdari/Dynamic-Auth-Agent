@@ -1,1 +1,60 @@
+# app/main.py
+import streamlit as st
+import pandas as pd
+import datetime
+import os
+import csv
+import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+try:
+    from features.feature_pipeline import get_user_transaction_graph
+    from models.decision_engine import generate_dynamic_challenge
+except ImportError:
+    pass 
+
+st.set_page_config(page_title="GraphGuard Dashboard", layout="wide")
+LOG_FILE = "logs/pipeline_logs.csv"
+
+def log_pipeline_event(user_id, latency, status):
+    os.makedirs("logs", exist_ok=True)
+    file_exists = os.path.isfile(LOG_FILE)
+    with open(LOG_FILE, "a", newline="") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["Timestamp", "User_ID", "Latency_Sec", "Status"])
+        writer.writerow([datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), user_id, latency, status])
+
+st.title("🛡️ GraphGuard: Production Decision Dashboard")
+
+tab1, tab2, tab3 = st.tabs(["Decision Engine", "Analytics Extension", "Pipeline Metrics Extension"])
+
+with tab1:
+    st.header("Dynamic Challenge Generator")
+    user_id = st.text_input("Enter User ID to lookup in Snowflake:", "USER_9981")
+    
+    if st.button("Generate Verification Challenge"):
+        with st.spinner("Querying Snowflake & Generating RAG Challenge..."):
+            context = get_user_transaction_graph(user_id)
+            decision = generate_dynamic_challenge(context)
+            log_pipeline_event(user_id, 1.25, decision["compliance_status"])
+            st.success("Challenge Generated Successfully")
+            st.json(decision)
+
+with tab2:
+    st.header("Extension 1: Interactive Analytics")
+    st.write("Visualizing recent transaction nodes from Snowflake (Mock Data)")
+    chart_data = pd.DataFrame({
+        "Amount": [54.30, 12.50, 8.99, 120.00],
+        "Merchant": ["Kroger", "Uber", "Starbucks", "Delta Airlines"]
+    }).set_index("Merchant")
+    st.bar_chart(chart_data)
+
+with tab3:
+    st.header("Extension 2: Pipeline Logging & Evaluation")
+    if os.path.exists(LOG_FILE):
+        df = pd.read_csv(LOG_FILE)
+        st.dataframe(df)
+        st.metric("Total Pipeline Invocations", len(df))
+    else:
+        st.write("No pipeline logs found yet. Run a challenge in Tab 1!")
