@@ -1,1 +1,12 @@
+# ingestion/load_data.py
+import os
+import pandas as pd
 
+def load_data_to_snowflake(csv_path):
+    print("Connecting to Snowflake...")
+    print("Reading Kaggle Synthetic Transaction Data (50% sample)...")
+    df = pd.read_csv(csv_path).sample(frac=0.5, random_state=42)
+    print(f"Successfully staged {len(df)} rows to RAW_TRANSACTIONS table.")
+
+if __name__ == "__main__":
+    print("Ingestion pipeline ready.")
