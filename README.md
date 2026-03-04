@@ -261,3 +261,12 @@ GraphGuard is a dynamic identity verification agent that replaces static authent
 | **Krutarth Lad** | **Data Architecture Lead:** Handled data ingestion and Snowflake cloud integration. Authored SQL schemas (`sql/schema.sql`) and developed the feature engineering pipeline to extract user sub-graphs for the LLM. | 50% |
 
 *Note: Both members actively participated in system design, risk analysis, and report generation.*
+
+## 🚀 Week 6 Update: AI Agent Layer Integrated
+GraphGuard is now powered by an intelligent AI Agent built via Google Antigravity IDE.
+* **Interactive Chat Interface:** Replaced static forms with a Streamlit chat UI.
+* **Tool-Calling Architecture:** The agent intelligently routes requests between three custom tools:
+  1. `query_snowflake_transactions`: Pulls graph context from our Snowflake warehouse.
+  2. `check_nist_compliance`: Queries our RAG vector store for SP 800-63B rules.
+  3. `generate_dynamic_challenge`: Synthesizes data into security questions.
+* **Demo Video:** [INSERT YOUTUBE/DRIVE LINK HERE AFTER RECORDING]
