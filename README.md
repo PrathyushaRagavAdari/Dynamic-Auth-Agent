@@ -232,3 +232,32 @@ GraphGuard is a dynamic identity verification agent. The production pipeline ing
 
 ## Deliverables Links
 - **Demo Video:** https://drive.google.com/file/d/1aWFpxEfwTBGd8cII638ZnVhbqfHqCJfR/view?usp=sharing
+
+# GraphGuard: Phase 2 Capstone Integration 🛡️
+
+## System Workflow & Architecture
+GraphGuard is a dynamic identity verification agent that replaces static authentication with dynamic challenges. 
+**Architecture Flow:**
+1. **Data Sources:** Kaggle Synthetic Fraud Data & NIST SP 800-63B Multimodal Guidelines.
+2. **Knowledge Infrastructure:** Structured data is ingested into a **Snowflake Cloud Warehouse**. Unstructured NIST guidelines are chunked, embedded, and stored in a Vector DB.
+3. **Intelligence Layer:** Python-based RAG pipeline (`models/decision_engine.py`) extracts feature graphs from Snowflake and retrieves compliance rules from the Vector DB.
+4. **Application Interface:** A **Streamlit Dashboard** (`app/main.py`) serves the final decision, complete with evidence citations and automated latency logging (`logs/pipeline_logs.csv`).
+
+## Implemented Extensions
+1. **Interactive Analytics Dashboard:** Visualizes recent transaction nodes natively in the Streamlit UI.
+2. **Evaluation Metrics Logging:** Automated tracking of pipeline invocations, latency, and compliance status, visualized in a real-time monitoring tab.
+
+## Setup Instructions
+1. `git clone https://github.com/PrathyushaRagavAdari/Dynamic-Auth-Agent.git`
+2. `pip install -r requirements.txt`
+3. Create a `.env` file with `OPENAI_API_KEY` and `SNOWFLAKE_USER`/`PASSWORD`/`ACCOUNT`.
+4. Run `streamlit run app/main.py`
+
+# Team Contribution Statement
+
+| Member | Contribution Description | Contribution % |
+| :--- | :--- | :--- |
+| **Prathyu Adari** | **Product & Strategy Lead:** Engineered the decision module (`models/decision_engine.py`) for dynamic NIST-compliant LLM outputs. Designed the Streamlit UI, interactive analytics dashboard, and managed the evaluation logging pipeline. | 50% |
+| **Krutarth Lad** | **Data Architecture Lead:** Handled data ingestion and Snowflake cloud integration. Authored SQL schemas (`sql/schema.sql`) and developed the feature engineering pipeline to extract user sub-graphs for the LLM. | 50% |
+
+*Note: Both members actively participated in system design, risk analysis, and report generation.*
