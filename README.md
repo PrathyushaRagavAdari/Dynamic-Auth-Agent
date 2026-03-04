@@ -269,4 +269,4 @@ GraphGuard is now powered by an intelligent AI Agent built via Google Antigravit
   1. `query_snowflake_transactions`: Pulls graph context from our Snowflake warehouse.
   2. `check_nist_compliance`: Queries our RAG vector store for SP 800-63B rules.
   3. `generate_dynamic_challenge`: Synthesizes data into security questions.
-* **Demo Video:** [[INSERT YOUTUBE/DRIVE LINK HERE AFTER RECORDING](https://drive.google.com/file/d/1F0lZQflLpdNwDi3HiYABYBQhmMJekp1o/view?usp=sharing)]
+* **Demo Video:** [[DRIVE LINK](https://drive.google.com/file/d/1F0lZQflLpdNwDi3HiYABYBQhmMJekp1o/view?usp=sharing)]
