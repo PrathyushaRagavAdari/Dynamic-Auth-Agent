@@ -270,3 +270,34 @@ GraphGuard is now powered by an intelligent AI Agent built via Google Antigravit
   2. `check_nist_compliance`: Queries our RAG vector store for SP 800-63B rules.
   3. `generate_dynamic_challenge`: Synthesizes data into security questions.
 * **Demo Video:** [[DRIVE LINK](https://drive.google.com/file/d/1F0lZQflLpdNwDi3HiYABYBQhmMJekp1o/view?usp=sharing)]
+
+# Week 7 Hands-On: Capstone System Hardening & Deployment 🛡️
+
+## Overview
+This directory contains the Week 7 system hardening milestone for **GraphGuard**, a dynamic identity verification AI agent. The objective of this sprint was to transition the project from a fragile local script into a reproducible, stable, and production-ready application. 
+
+By implementing configuration-driven execution, automated pre-flight testing, and strict environment control, this system is now fully deployable and presentation-ready.
+
+## 📁 Directory Structure
+```text
+Week 7 Hands-On/
+├── Prathyu/                
+│   ├── week 7 contribution.pdf         # Team and Individial Contributions
+├── agent/                  # AI agent routing logic and tool schemas
+│   ├── __init__.py         # Module initialization
+│   ├── agent_runner.py     # Main GPT-4o tool selector and executor
+│   ├── tools.py            # Callable tools (Snowflake query, NIST compliance)
+│   └── tool_schemas.py     # JSON schemas for agent function calling
+├── app/                    # Application frontend
+│   ├── __init__.py
+│   └── main.py             # 3-tab Streamlit dashboard 
+├── artifacts/              # Stateful directory for generated system outputs
+├── config/                 # Configuration-driven parameterization
+│   └── settings.json       # Centralized target metrics and file paths
+├── logs/                   # System observability layer
+│   └── pipeline_logs.csv   # Automated telemetry and latency tracking
+├── scripts/                # Deployment and utility scripts
+│   └── smoke_test.py       # Pre-flight environment validation check
+├── Dockerfile              # Containerization instructions
+├── requirements.txt        # Pinned Python dependencies
+└── run.sh                  # Single-command startup bash script
