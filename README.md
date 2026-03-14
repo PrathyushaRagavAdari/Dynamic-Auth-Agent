@@ -290,7 +290,7 @@ Week 7 Hands-On/
 │   └── tool_schemas.py     # JSON schemas for agent function calling
 ├── app/                    # Application frontend
 │   ├── __init__.py
-│   └── main.py             # 3-tab Streamlit dashboard 
+│   └── main.py             # Streamlit dashboard 
 ├── artifacts/              # Stateful directory for generated system outputs
 ├── config/                 # Configuration-driven parameterization
 │   └── settings.json       # Centralized target metrics and file paths
