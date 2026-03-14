@@ -1,0 +1,8 @@
+{
+    "app_name": "GraphGuard Agentic System",
+    "version": "1.1.0",
+    "target_latency_seconds": 2.0,
+    "log_file_path": "logs/pipeline_logs.csv",
+    "artifact_dir": "artifacts/",
+    "agent_model": "gpt-4o"
+}
