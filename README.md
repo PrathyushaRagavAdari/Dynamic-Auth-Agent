@@ -329,9 +329,9 @@ By aggressively improving our UI workflow, system evaluation metrics, developer 
 ```text
 Dynamic-Auth-Agent/
 ├── Week 9 Hands-On/                  
-│   ├── agent_runner.py     # Upgraded with native Python debug logging & reasoning traces                   
-│   └── main.py             # Upgraded with expandable reasoning UI and visual KPIs                 
-│   ├── pipeline_logs.csv   # User-facing telemetry (Latency, Status)
-│   └── debug.log           # NEW: Backend developer debugging trails
-├── .env.example            # NEW: Deployment credential template
-└── docker-compose.yml      # NEW: Persistent multi-container orchestration
+    ├── agent_runner.py     # Upgraded with native Python debug logging & reasoning traces                   
+    ├── main.py             # Upgraded with expandable reasoning UI and visual KPIs                 
+    ├── pipeline_logs.csv   # User-facing telemetry (Latency, Status)
+    ├── debug.log           # NEW: Backend developer debugging trails
+    ├── .env.example        # NEW: Deployment credential template
+    └── docker-compose.yml  # NEW: Persistent multi-container orchestration
