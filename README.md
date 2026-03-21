@@ -301,8 +301,8 @@ Week 7 Hands-On/
 ├── Dockerfile              # Containerization instructions
 ├── requirements.txt        # Pinned Python dependencies
 └── run.sh                  # Single-command startup bash script
-
-# Week 9: Prototype Enhancement & Deployment Readiness 🚀
+```
+# Week 9 Hands-On: Prototype Enhancement & Deployment Readiness 🚀
 
 ## System Overview
 This directory contains the Week 9 production enhancements for **GraphGuard (Veriscan)**. The objective of this sprint was to elevate the capstone prototype into a highly observable, stable, and demo-ready enterprise application. 
@@ -335,3 +335,4 @@ Dynamic-Auth-Agent/
     ├── debug.log           # NEW: Backend developer debugging trails
     ├── .env.example        # NEW: Deployment credential template
     └── docker-compose.yml  # NEW: Persistent multi-container orchestration
+```
