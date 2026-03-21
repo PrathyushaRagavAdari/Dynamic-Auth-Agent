@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  graphguard-app:
+    build: .
+    container_name: graphguard-production
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./logs:/app/logs
+      - ./artifacts:/app/artifacts
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped
